@@ -6,7 +6,7 @@ mod tests {
     define!(TEST_F64_CONST: f64, 3.14);
     define!(TEST_STR_CONST: &'static str, "Hello, World!");
 
-    define!(TEST_FUNCTION, {
+    define!(test_func, {
         let x = 10;
         let y = 20;
         x + y
@@ -23,7 +23,7 @@ mod tests {
     }
 
     fn test_function() {
-        let result = TEST_FUNCTION();
+        let result = test_func();
         assert_eq!(*result.downcast_ref::<i32>().unwrap(), 30);
     }
 

@@ -1,4 +1,6 @@
 pub mod fabric;
+pub mod timeit;
+pub mod functor;
 
 macro_rules! ifndef {
     ($name:ident, $body:block) => {
